@@ -1,9 +1,17 @@
+Assassins\ GO\ Board\ Game/[Ll]ibrary/
 /[Ll]ibrary/
+Assassins\ GO\ Board\ Game/[Tt]emp/
 /[Tt]emp/
+Assassins\ GO\ Board\ Game/[Oo]bj/
 /[Oo]bj/
+Assassins\ GO\ Board\ Game/[Bb]uild/
 /[Bb]uild/
+Assassins\ GO\ Board\ Game/[Bb]uilds/
 /[Bb]uilds/
+Assassins\ GO\ Board\ Game/Assets/AssetStoreTools*
 /Assets/AssetStoreTools*
+Assassins\ GO\ Board\ Game/Library/ShaderCache/*
+Assassins\ GO\ Board\ Game/LeanTween/*
 
 # Visual Studio 2015 cache directory
 /.vs/
