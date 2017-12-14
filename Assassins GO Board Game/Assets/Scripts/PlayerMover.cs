@@ -14,21 +14,10 @@ public class PlayerMover : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine(Test());
-		// StartCoroutine("Test");
+
 	}
 
-	IEnumerator Test()
-	{
-		yield return new WaitForSeconds(1f);
-		MoveRight();
-		yield return new WaitForSeconds(2f);
-		MoveRight();
-		yield return new WaitForSeconds(2f);
-		MoveForward();
-		yield return new WaitForSeconds(2f);
-		MoveForward();
-	}
+
 
 	public void Move(Vector3 destinationPos, float delayTime = 0.25f )
 	{
