@@ -30,6 +30,8 @@ public class PlayerMover : MonoBehaviour {
 	IEnumerator MoveRoutine(Vector3 destinationPos, float delayTime)
 	{
 		isMoving = true;
+		destination = destinationPos;
+
 		yield return new WaitForSeconds(delayTime);
 		iTween.MoveTo(gameObject, iTween.Hash(
 			"x", destinationPos.x,
