@@ -14,12 +14,20 @@ public class PlayerMover : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		// Testing here
-		Move(new Vector3(2f, 0f, 0f), 1f);
-		Move(new Vector3(4f, 0f, 0f), 3f);
-		Move(new Vector3(4f, 0f, 2f), 5f);
-		Move(new Vector3(4f, 0f, 4f), 7f);
-		// End testing
+		StartCoroutine(Test());
+		// StartCoroutine("Test");
+	}
+
+	IEnumerator Test()
+	{
+		yield return new WaitForSeconds(1f);
+		MoveRight();
+		yield return new WaitForSeconds(2f);
+		MoveRight();
+		yield return new WaitForSeconds(2f);
+		MoveForward();
+		yield return new WaitForSeconds(2f);
+		MoveForward();
 	}
 
 	public void Move(Vector3 destinationPos, float delayTime = 0.25f )
@@ -50,6 +58,30 @@ public class PlayerMover : MonoBehaviour {
 		iTween.Stop(gameObject);
 		transform.position = destinationPos;
 		isMoving = false;
+	}
+
+	public void MoveLeft()
+	{
+		Vector3 newPosition = transform.position + new Vector3(-2, 0, 0);
+		Move(newPosition, 0f);
+	}
+
+	public void MoveRight()
+	{
+		Vector3 newPosition = transform.position + new Vector3(2, 0, 0);
+		Move(newPosition, 0f);
+	}
+
+	public void MoveForward()
+	{
+		Vector3 newPosition = transform.position + new Vector3(0, 0, 2);
+		Move(newPosition, 0f);
+	}
+
+	public void MoveBackward()
+	{
+		Vector3 newPosition = transform.position + new Vector3(0, 0, -2);
+		Move(newPosition, 0f);
 	}
 	
 	// Update is called once per frame
